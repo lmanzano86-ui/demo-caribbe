@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caribbe Envíos a Cuba — Tampa | Envíos, pasaportes y vuelos</title>
+<meta name="description" content="Caribbe Agencia de Viajes, Tampa: envíos a Cuba marítimos, aéreos y exprés, pasaporte cubano, notaría y vuelos. (813) 505-0795">
+<meta name="theme-color" content="#00288A">
+<link rel="icon" type="image/webp" href="imgs/logo.webp">
+<link rel="canonical" href="https://lmanzano86-ui.github.io/demo-caribbe/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Caribbe Envíos a Cuba — Tampa">
+<meta property="og:description" content="Envíos a Cuba desde $1.99 la libra: marítimo, aéreo y exprés puerta a puerta. Pasaporte cubano, notaría y vuelos en Tampa.">
+<meta property="og:image" content="imgs/rotulo.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Caribbe Agencia de Viajes","alternateName":"Caribbe Envíos a Cuba","telephone":"+1-813-505-0795","address":{"@type":"PostalAddress","streetAddress":"3405 W Columbus Dr Ste B","addressLocality":"Tampa","addressRegion":"FL","postalCode":"33607","addressCountry":"US"},"openingHours":["Mo-Fr 10:00-18:00","Sa 10:00-15:00"],"priceRange":"$$"}
+</script>
+<style>
+:root{
+  --marino:#00288A; --marino-osc:#071A45; --azul:#1C4685; --cielo:#EAF1FB;
+  --dorado:#E8B80E; --dorado-osc:#9A6037; --rojo:#E02131;
+  --tinta:#16233B; --gris:#5A6B84; --linea:#D7E1F0;
+  --espacio-seccion:56px; --espacio-bloque:24px; --espacio-tarjeta:16px; --espacio-control:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Source Sans 3",system-ui,sans-serif;color:var(--tinta);background:#fff;line-height:1.55;font-size:17px}
+h1,h2,h3{font-family:"Zilla Slab",serif;line-height:1.12;color:var(--marino-osc)}
+img{display:block;max-width:100%}
+a{color:var(--azul)}
+.contenedor{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:var(--espacio-seccion) 0}
+.kicker{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--dorado-osc);margin-bottom:10px}
+h2{font-size:32px;margin-bottom:12px}
+.sub{color:var(--gris);max-width:56ch;margin-bottom:var(--espacio-bloque)}
+/* Cabecera */
+.cabecera{position:sticky;top:0;background:#fff;border-bottom:3px solid var(--dorado);z-index:20}
+.cabecera-in{display:flex;align-items:center;gap:12px;padding:10px 0}
+.logo{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--dorado)}
+.nombre{font-family:"Zilla Slab",serif;font-weight:700;font-size:21px;color:var(--marino-osc);line-height:1.05}
+.nombre small{display:block;font-family:"Source Sans 3",sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dorado-osc)}
+.cabecera .espacio-flex{flex:1}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--dorado);color:var(--marino-osc);font-weight:700;text-decoration:none;padding:12px 20px;border-radius:6px;border:2px solid var(--dorado);font-size:16px}
+.btn:hover{background:#F4C62E}
+.btn-contorno{background:transparent;color:var(--marino);border-color:var(--marino)}
+.btn-contorno:hover{background:var(--cielo)}
+.btn-marino{background:var(--marino);border-color:var(--marino);color:#fff}
+.btn-marino:hover{background:var(--azul)}
+.lang{display:flex;border:2px solid var(--marino);border-radius:6px;overflow:hidden}
+.lang button{border:0;background:#fff;color:var(--marino);font-weight:700;padding:8px 12px;cursor:pointer;font-size:14px}
+.lang button.activo{background:var(--marino);color:#fff}
+/* Hero */
+.hero{background:var(--marino-osc);color:#fff;padding:0}
+.hero-in{display:flex;flex-wrap:wrap;align-items:stretch}
+.hero-txt{flex:1 1 340px;padding:52px 28px 52px 0}
+.hero-txt .kicker{color:var(--dorado)}
+.hero-txt h1{color:#fff;font-size:42px;margin-bottom:14px}
+.hero-txt h1 .precio{color:var(--dorado)}
+.hero-txt p{color:#C9D6F2;max-width:46ch;margin-bottom:var(--espacio-bloque)}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px}
+.ruta{display:flex;align-items:center;gap:8px;margin-top:30px;color:#9FB6E4;font-weight:600;font-size:14.5px;letter-spacing:.06em}
+.ruta .linea-ruta{flex:0 0 74px;border-top:3px dotted var(--dorado)}
+.hero-foto{flex:1 1 340px;min-height:300px}
+.hero-foto img{width:100%;height:100%;object-fit:cover;border-left:6px solid var(--dorado)}
+/* Cotizador (puerta a PuntoReady) */
+.cotiza{background:var(--cielo)}
+.modos{display:flex;flex-direction:column;gap:14px;margin-bottom:var(--espacio-bloque)}
+.modo{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--linea);border-left:8px solid var(--marino);border-radius:6px;padding:16px 18px;box-shadow:6px 6px 0 rgba(0,40,138,.14)}
+.modo.expres{border-left-color:var(--rojo)}
+.modo.aereo{border-left-color:var(--dorado)}
+.modo img{width:92px;height:92px;object-fit:cover;border-radius:6px;border:3px solid var(--marino)}
+.modo .info{flex:1}
+.modo h3{font-size:21px}
+.modo p{color:var(--gris);font-size:15.5px}
+.modo .tarifa{text-align:right}
+.modo .tarifa .monto{font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--marino)}
+.modo .tarifa .por{color:var(--gris);font-size:14px;display:block}
+.nota{font-size:14px;color:var(--gris)}
+/* Cajas */
+.cajas{display:flex;flex-wrap:wrap;gap:14px}
+.caja{flex:1 1 200px;background:var(--marino);color:#fff;border-radius:6px;padding:20px}
+.caja h3{color:#fff;font-size:20px}
+.caja .monto{font-family:"Zilla Slab",serif;font-size:34px;color:var(--dorado);font-weight:700}
+.caja p{color:#C9D6F2;font-size:15px}
+/* Servicios */
+.servicios{display:flex;flex-direction:column;gap:0}
+.servicio{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--linea)}
+.servicio:first-child{padding-top:0}
+.servicio img{width:110px;height:84px;object-fit:cover;border-radius:6px;border:3px solid var(--marino)}
+.servicio h3{font-size:20px;margin-bottom:4px}
+.servicio p{color:var(--gris);font-size:15.5px;max-width:62ch}
+/* Pasos */
+.pasos{background:var(--marino-osc);color:#fff}
+.pasos h2{color:#fff}
+.pasos .sub{color:#C9D6F2}
+.paso-lista{display:flex;flex-wrap:wrap;gap:14px}
+.paso{flex:1 1 220px;border:1px solid #2C4A8A;border-radius:6px;padding:20px}
+.paso .num{font-family:"Zilla Slab",serif;font-size:15px;font-weight:700;color:var(--marino-osc);background:var(--dorado);display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;margin-bottom:12px}
+.paso h3{color:#fff;font-size:19px;margin-bottom:6px}
+.paso p{color:#C9D6F2;font-size:15.5px}
+/* Sedes */
+.sedes{display:flex;flex-wrap:wrap;gap:14px}
+.sede{flex:1 1 280px;border:1px solid var(--linea);border-radius:6px;padding:20px}
+.sede h3{font-size:21px;margin-bottom:8px}
+.sede p{font-size:15.5px;color:var(--tinta)}
+.sede .etq{font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:12.5px;color:var(--dorado-osc)}
+details{border-bottom:1px solid var(--linea);padding:14px 0}
+summary{font-weight:700;cursor:pointer;color:var(--marino-osc);font-size:17.5px}
+details p{color:var(--gris);margin-top:8px;max-width:66ch}
+.pie{background:var(--marino-osc);color:#C9D6F2;padding:36px 0;font-size:15px}
+.pie strong{color:#fff}
+.sello{display:inline-flex;align-items:center;gap:10px;border:2px solid var(--dorado);border-radius:999px;padding:6px 16px 6px 6px;color:#fff;font-weight:700}
+.sello img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+@media (max-width:640px){
+  h1{font-size:34px} h2{font-size:27px}
+  .hero-txt{padding:38px 0 30px}
+  .hero-foto{min-height:220px}
+  .modo{flex-wrap:wrap}
+  .modo .tarifa{text-align:left}
+  .nombre{font-size:18px}
+  .nombre small{display:none}
+  .logo{width:44px;height:44px}
+  .cabecera-in{gap:8px}
+  .cabecera .btn{padding:10px 12px;font-size:15px}
+  .lang button{padding:7px 9px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media print{.cabecera{position:static}.hero-foto{min-height:0}}
+</style>
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="contenedor cabecera-in">
+    <img class="logo" src="imgs/logo.webp" alt="Logo de Caribbe">
+    <div class="nombre">Caribbe<small data-es="Envíos a Cuba · Tampa" data-en="Shipping to Cuba · Tampa">Envíos a Cuba · Tampa</small></div>
+    <div class="espacio-flex"></div>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" id="btn-es" class="activo" onclick="setLang('es')">ES</button>
+      <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+    <a class="btn" href="tel:+18135050795" data-es="Llamar" data-en="Call">Llamar</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="contenedor hero-in">
+    <div class="hero-txt">
+      <div class="kicker" data-es="Agencia Caribbe · Tampa" data-en="Caribbe Agency · Tampa">Agencia Caribbe · Tampa</div>
+      <h1><span data-es="Envíos a Cuba desde" data-en="Shipping to Cuba from">Envíos a Cuba desde</span> <span class="precio" data-es="$1.99 la libra" data-en="$1.99 per pound">$1.99 la libra</span></h1>
+      <p data-es="Marítimo, aéreo y exprés puerta a puerta en toda Cuba. Tu caja se pesa delante de ti y tu familia la recibe en su casa." data-en="Maritime, air and express shipping, door to door across Cuba. Your box is weighed in front of you and your family receives it at home.">Marítimo, aéreo y exprés puerta a puerta en toda Cuba. Tu caja se pesa delante de ti y tu familia la recibe en su casa.</p>
+      <div class="hero-btns">
+        <a class="btn" href="#cotiza" data-es="Cotiza tu envío" data-en="Quote your shipment">Cotiza tu envío</a>
+        <a class="btn btn-contorno" style="color:#fff;border-color:#fff" href="https://wa.me/18135050795" data-es="WhatsApp" data-en="WhatsApp">WhatsApp</a>
+      </div>
+      <div class="ruta"><span>TAMPA</span><span class="linea-ruta"></span><span>✈</span><span class="linea-ruta"></span><span data-es="LA HABANA · TODA CUBA" data-en="HAVANA · ALL OF CUBA">LA HABANA · TODA CUBA</span></div>
+    </div>
+    <div class="hero-foto"><img src="imgs/rotulo.webp" alt="Rótulo de Caribbe Travel Agency en Tampa"></div>
+  </div>
+</section>
+
+<section class="cotiza" id="cotiza">
+  <div class="contenedor">
+    <div class="kicker" data-es="Cotizador" data-en="Quote">Cotizador</div>
+    <h2 data-es="¿Cuánto cuesta tu envío?" data-en="How much is your shipment?">¿Cuánto cuesta tu envío?</h2>
+    <p class="sub" data-es="Tres formas de enviar, con la tarifa publicada por la agencia. Elige la tuya y cotiza en línea: el sistema te da el total con el peso exacto de tu caja." data-en="Three ways to ship, at the agency's published rates. Pick yours and quote online: the system gives you the total with your box's exact weight.">Tres formas de enviar, con la tarifa publicada por la agencia. Elige la tuya y cotiza en línea: el sistema te da el total con el peso exacto de tu caja.</p>
+    <div class="modos">
+      <article class="modo">
+        <img loading="lazy" src="imgs/caja.webp" alt="Caja de envío">
+        <div class="info">
+          <h3 data-es="Marítimo económico" data-en="Economy maritime">Marítimo económico</h3>
+          <p data-es="El más barato para cajas grandes y duraderos. Entrega en 25 a 45 días en toda Cuba." data-en="The cheapest way for large boxes and durable goods. Delivery in 25 to 45 days across Cuba.">El más barato para cajas grandes y duraderos. Entrega en 25 a 45 días en toda Cuba.</p>
+        </div>
+        <div class="tarifa"><span class="monto">$1.99</span><span class="por" data-es="por libra" data-en="per pound">por libra</span></div>
+      </article>
+      <article class="modo aereo">
+        <img loading="lazy" src="imgs/avion.webp" alt="Avión de carga">
+        <div class="info">
+          <h3 data-es="Aéreo rápido y seguro" data-en="Fast, safe air shipping">Aéreo rápido y seguro</h3>
+          <p data-es="Carga aérea con entrega en 10 a 15 días. Ideal para plantas eléctricas y equipos: una EcoFlow Delta 3 Classic llega puerta a puerta por $700." data-en="Air cargo with delivery in 10 to 15 days. Ideal for power stations and equipment: an EcoFlow Delta 3 Classic arrives door to door for $700.">Carga aérea con entrega en 10 a 15 días. Ideal para plantas eléctricas y equipos: una EcoFlow Delta 3 Classic llega puerta a puerta por $700.</p>
+        </div>
+        <div class="tarifa"><span class="monto">$2.99</span><span class="por" data-es="por libra" data-en="per pound">por libra</span></div>
+      </article>
+      <article class="modo expres">
+        <img loading="lazy" src="imgs/maleta-pasaporte.webp" alt="Maleta y pasaporte">
+        <div class="info">
+          <h3 data-es="Exprés por pasajero" data-en="Passenger express">Exprés por pasajero</h3>
+          <p data-es="Lo urgente en 5 a 10 días: alimentos, medicina e higiene a $5 la libra; misceláneos a $6 la libra. Celulares a Cuba por solo $20." data-en="Urgent items in 5 to 10 days: food, medicine and hygiene at $5 per pound; miscellaneous at $6 per pound. Cell phones to Cuba for only $20.">Lo urgente en 5 a 10 días: alimentos, medicina e higiene a $5 la libra; misceláneos a $6 la libra. Celulares a Cuba por solo $20.</p>
+        </div>
+        <div class="tarifa"><span class="monto">$5–$6</span><span class="por" data-es="por libra" data-en="per pound">por libra</span></div>
+      </article>
+    </div>
+    <a class="btn btn-marino" href="https://puntoready.newageprosystem.com/t/caribbe" data-es="Abrir el cotizador en línea" data-en="Open the online quote tool">Abrir el cotizador en línea</a>
+    <p class="nota" style="margin-top:12px" data-es="Precios de muestra: son los publicados por la agencia en sus redes en octubre de 2026 y se confirman con el negocio antes de publicar esta página." data-en="Sample prices: published by the agency on its social media in October 2026 and to be confirmed with the business before this page goes live.">Precios de muestra: son los publicados por la agencia en sus redes en octubre de 2026 y se confirman con el negocio antes de publicar esta página.</p>
+  </div>
+</section>
+
+<section>
+  <div class="contenedor">
+    <div class="kicker" data-es="Cajas marítimas" data-en="Maritime boxes">Cajas marítimas</div>
+    <h2 data-es="Cajas que no se cobran por peso" data-en="Boxes not charged by weight">Cajas que no se cobran por peso</h2>
+    <p class="sub" data-es="Llena la caja hasta 100 libras y paga el precio fijo de la caja, por vía marítima." data-en="Fill the box up to 100 pounds and pay the box's flat price, by sea.">Llena la caja hasta 100 libras y paga el precio fijo de la caja, por vía marítima.</p>
+    <div class="cajas">
+      <div class="caja"><h3>12″ × 12″</h3><div class="monto">$50</div><p data-es="La del aceite: 6 botellas viajan por este precio." data-en="The oil box: 6 bottles ship at this price.">La del aceite: 6 botellas viajan por este precio.</p></div>
+      <div class="caja"><h3>14″ × 14″ × 14″</h3><div class="monto">$60</div><p data-es="La mediana de la casa, para la compra del mes." data-en="The house medium, for the monthly shopping.">La mediana de la casa, para la compra del mes.</p></div>
+      <div class="caja"><h3>16″ × 16″ × 16″</h3><div class="monto">$70</div><p data-es="La grande: hasta 100 libras sin pagar por libra." data-en="The large one: up to 100 pounds with no per-pound charge.">La grande: hasta 100 libras sin pagar por libra.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="contenedor">
+    <div class="kicker" data-es="Servicios" data-en="Services">Servicios</div>
+    <h2 data-es="Todo tu trámite con Cuba, en un solo lugar" data-en="All your Cuba paperwork, in one place">Todo tu trámite con Cuba, en un solo lugar</h2>
+    <p class="sub"></p>
+    <div class="servicios">
+      <article class="servicio">
+        <img loading="lazy" src="imgs/maleta-pasaporte.webp" alt="Pasaporte y maleta">
+        <div>
+          <h3 data-es="Pasaporte cubano y visas" data-en="Cuban passport and visas">Pasaporte cubano y visas</h3>
+          <p data-es="Pasaporte por primera vez, renovación y visas para viajar a Cuba, con seguimiento de tu caso en línea: sabes en qué paso va sin tener que llamar." data-en="First-time passports, renewals and visas to travel to Cuba, with online case tracking: you know where your case stands without calling.">Pasaporte por primera vez, renovación y visas para viajar a Cuba, con seguimiento de tu caso en línea: sabes en qué paso va sin tener que llamar.</p>
+        </div>
+      </article>
+      <article class="servicio">
+        <img loading="lazy" src="imgs/avion.webp" alt="Avión">
+        <div>
+          <h3 data-es="Vuelos a Cuba" data-en="Flights to Cuba">Vuelos a Cuba</h3>
+          <p data-es="Tampa–Santa Clara desde $369 (jueves, sábado y domingo) y Tampa–Holguín desde $409 (martes). También renta de autos y hoteles en Cuba." data-en="Tampa–Santa Clara from $369 (Thursday, Saturday and Sunday) and Tampa–Holguín from $409 (Tuesday). Car rentals and hotels in Cuba too.">Tampa–Santa Clara desde $369 (jueves, sábado y domingo) y Tampa–Holguín desde $409 (martes). También renta de autos y hoteles en Cuba.</p>
+        </div>
+      </article>
+      <article class="servicio">
+        <img loading="lazy" src="imgs/apreton.webp" alt="Apretón de manos">
+        <div>
+          <h3 data-es="Notaría, remesas y recargas" data-en="Notary, remittances and top-ups">Notaría, remesas y recargas</h3>
+          <p data-es="Trámites notariales, envío de dinero a tu familia y recargas, resueltos en la misma visita que tu envío." data-en="Notary services, money sent to your family and mobile top-ups, all handled in the same visit as your shipment.">Trámites notariales, envío de dinero a tu familia y recargas, resueltos en la misma visita que tu envío.</p>
+        </div>
+      </article>
+      <article class="servicio">
+        <img loading="lazy" src="imgs/caja.webp" alt="Caja lista para enviar">
+        <div>
+          <h3 data-es="Envío de autos y cargas grandes" data-en="Car shipping and large cargo">Envío de autos y cargas grandes</h3>
+          <p data-es="Autos de Tampa a La Habana (un Hyundai Elantra viajó por $4,500) y cargas grandes puerta a puerta: plantas eléctricas, paneles solares y electrodomésticos." data-en="Cars from Tampa to Havana (a Hyundai Elantra shipped for $4,500) and large door-to-door cargo: power stations, solar panels and appliances.">Autos de Tampa a La Habana (un Hyundai Elantra viajó por $4,500) y cargas grandes puerta a puerta: plantas eléctricas, paneles solares y electrodomésticos.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="pasos">
+  <div class="contenedor">
+    <div class="kicker" style="color:var(--dorado)" data-es="Cómo funciona" data-en="How it works">Cómo funciona</div>
+    <h2 data-es="Así de simple es enviar" data-en="Shipping is this simple">Así de simple es enviar</h2>
+    <p class="sub" data-es="El mismo proceso que la agencia muestra en sus videos, ahora también en línea." data-en="The same process the agency shows in its videos, now online too.">El mismo proceso que la agencia muestra en sus videos, ahora también en línea.</p>
+    <div class="paso-lista">
+      <div class="paso"><span class="num">1</span><h3 data-es="Trae tu caja o te la armamos" data-en="Bring your box or we pack it">Trae tu caja o te la armamos</h3><p data-es="Trae tus cosas sueltas: aquí se empacan, se protegen y se sellan delante de ti." data-en="Bring your items loose: they are packed, protected and sealed in front of you here.">Trae tus cosas sueltas: aquí se empacan, se protegen y se sellan delante de ti.</p></div>
+      <div class="paso"><span class="num">2</span><h3 data-es="Se pesa delante de ti" data-en="Weighed in front of you">Se pesa delante de ti</h3><p data-es="La báscula marca el peso exacto y pagas la tarifa publicada, sin sorpresas. Recibes tu número de seguimiento." data-en="The scale shows the exact weight and you pay the published rate, no surprises. You get your tracking number.">La báscula marca el peso exacto y pagas la tarifa publicada, sin sorpresas. Recibes tu número de seguimiento.</p></div>
+      <div class="paso"><span class="num">3</span><h3 data-es="Tu familia lo recibe en su puerta" data-en="Your family gets it at their door">Tu familia lo recibe en su puerta</h3><p data-es="Entrega puerta a puerta en todas las provincias de Cuba, y tú sigues el envío en línea hasta que llega." data-en="Door-to-door delivery in every province of Cuba, and you track the shipment online until it arrives.">Entrega puerta a puerta en todas las provincias de Cuba, y tú sigues el envío en línea hasta que llega.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="contenedor">
+    <div class="kicker" data-es="Visítanos" data-en="Visit us">Visítanos</div>
+    <h2 data-es="Dos oficinas, la misma agencia" data-en="Two offices, the same agency">Dos oficinas, la misma agencia</h2>
+    <p class="sub"></p>
+    <div class="sedes">
+      <div class="sede">
+        <div class="etq">Tampa, Florida</div>
+        <h3>3405 W Columbus Dr, Ste B</h3>
+        <p>Tampa, FL 33607<br><a href="tel:+18135050795">(813) 505-0795</a><br><span data-es="Lunes a viernes 10 AM – 6 PM · Sábado 10 AM – 3 PM" data-en="Monday to Friday 10 AM – 6 PM · Saturday 10 AM – 3 PM">Lunes a viernes 10 AM – 6 PM · Sábado 10 AM – 3 PM</span></p>
+        <p style="margin-top:12px"><a class="btn btn-contorno" href="https://maps.app.goo.gl/zirHusLWuAAWMZbC9" data-es="Cómo llegar" data-en="Get directions">Cómo llegar</a></p>
+      </div>
+      <div class="sede">
+        <div class="etq">Glendale, Arizona</div>
+        <h3>6802 N 47th Ave, Ste 4</h3>
+        <p>Glendale, AZ 85301<br><a href="tel:+14804799891">(480) 479-9891</a><br><span data-es="La oficina principal de Caribbe Legal Services." data-en="The main Caribbe Legal Services office.">La oficina principal de Caribbe Legal Services.</span></p>
+        <p style="margin-top:12px"><a class="btn btn-contorno" href="https://puntoready.newageprosystem.com/t/caribbe" data-es="Rastrea tu envío" data-en="Track your shipment">Rastrea tu envío</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="contenedor">
+    <div class="kicker" data-es="Preguntas frecuentes" data-en="FAQ">Preguntas frecuentes</div>
+    <h2 data-es="Lo que todos preguntan" data-en="What everyone asks">Lo que todos preguntan</h2>
+    <details>
+      <summary data-es="¿Puedo enviar aceite y alimentos?" data-en="Can I ship oil and food?">¿Puedo enviar aceite y alimentos?</summary>
+      <p data-es="Sí. El aceite es de lo más enviado: una caja 12×12 con 6 botellas viaja por $50 en marítimo. Alimentos, medicina e higiene van por exprés a $5 la libra si urgen." data-en="Yes. Oil is one of the most shipped items: a 12×12 box with 6 bottles ships for $50 by sea. Food, medicine and hygiene go by express at $5 per pound if urgent.">Sí. El aceite es de lo más enviado: una caja 12×12 con 6 botellas viaja por $50 en marítimo. Alimentos, medicina e higiene van por exprés a $5 la libra si urgen.</p>
+    </details>
+    <details>
+      <summary data-es="¿Cómo sigo mi envío?" data-en="How do I track my shipment?">¿Cómo sigo mi envío?</summary>
+      <p data-es="Con tu número de seguimiento, en la página de rastreo de la agencia: el estado se actualiza en cada paso, sin tener que llamar." data-en="With your tracking number, on the agency's tracking page: the status updates at every step, no phone call needed.">Con tu número de seguimiento, en la página de rastreo de la agencia: el estado se actualiza en cada paso, sin tener que llamar.</p>
+    </details>
+    <details>
+      <summary data-es="¿Puedo pagar a plazos?" data-en="Can I pay in installments?">¿Puedo pagar a plazos?</summary>
+      <p data-es="En la oficina de Arizona la agencia acepta Klarna, Affirm y Zip, además de Zelle. Pregunta en Tampa por las opciones vigentes al momento de tu envío." data-en="The Arizona office accepts Klarna, Affirm and Zip, plus Zelle. Ask in Tampa about the options available at the time of your shipment.">En la oficina de Arizona la agencia acepta Klarna, Affirm y Zip, además de Zelle. Pregunta en Tampa por las opciones vigentes al momento de tu envío.</p>
+    </details>
+  </div>
+</section>
+
+<footer class="pie">
+  <div class="contenedor">
+    <div class="sello"><img loading="lazy" src="imgs/logo.webp" alt="Logo de Caribbe"><span>Caribbe · <span data-es="Tu conexión con Cuba" data-en="Your connection to Cuba">Tu conexión con Cuba</span></span></div>
+    <p style="margin-top:16px"><strong>Caribbe Agencia de Viajes</strong> · 3405 W Columbus Dr Ste B, Tampa, FL 33607 · <a style="color:#fff" href="tel:+18135050795">(813) 505-0795</a></p>
+    <p style="margin-top:8px" data-es="Página demo preparada por New Age Professional Services. Precios de muestra publicados por la agencia; se confirman con el negocio antes de publicar." data-en="Demo page prepared by New Age Professional Services. Sample prices published by the agency; to be confirmed with the business before going live.">Página demo preparada por New Age Professional Services. Precios de muestra publicados por la agencia; se confirman con el negocio antes de publicar.</p>
+  </div>
+</footer>
+
+<script>
+function setLang(lang){
+  document.querySelectorAll('[data-'+lang+']').forEach(function(el){ el.textContent = el.getAttribute('data-'+lang); });
+  document.documentElement.lang = lang;
+  document.getElementById('btn-es').classList.toggle('activo', lang==='es');
+  document.getElementById('btn-en').classList.toggle('activo', lang==='en');
+  try{ localStorage.setItem('caribbe-lang', lang); }catch(e){}
+}
+try{ var l = localStorage.getItem('caribbe-lang'); if(l==='en') setLang('en'); }catch(e){}
+</script>
+</body>
+</html>
